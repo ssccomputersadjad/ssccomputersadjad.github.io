@@ -123,7 +123,7 @@ const App = () => {
   useEffect(() => {
     if (current === 2) {
       setGalleryTimerDone(false);
-      const timer = setTimeout(() => setGalleryTimerDone(true), 3000);
+      const timer = setTimeout(() => setGalleryTimerDone(true), 15000);
       return () => clearTimeout(timer);
     } else {
       setGalleryTimerDone(true);
