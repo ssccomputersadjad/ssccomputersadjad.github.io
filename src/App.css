@@ -8,10 +8,20 @@
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  color: white;
 }
 
 .Steps {
   width: 100%;
+  color: white !important;
+}
+
+.Steps .ant-steps-item-title {
+  color: white !important;
+}
+
+.Steps .ant-steps-item-description {
+  color: white !important;
 }
 
 .flex {
@@ -24,4 +34,10 @@
 
 .flex-col {
   flex-direction: column;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }

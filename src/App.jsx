@@ -8,6 +8,7 @@ const JoinSadjadChannel = ({ onLinkClick }) => {
     <div className="flex flex-col">
       <span>شما میتونید با کلیک بر روی لینک زیر عضو کانال دانشگاه شوید</span>
       <a
+        style={{ color: "white" }}
         onClick={() => {
           onLinkClick();
           window.open("https://t.me/SadjadUniversity", "_blank", "noreferrer");
@@ -29,6 +30,7 @@ const JoinComputerChannel = ({ onLinkClick }) => {
         شما میتونید با کلیک بر روی لینک زیر عضو کانال انجمن علمی کامپیوتر شوید
       </span>
       <a
+        style={{ color: "white" }}
         onClick={() => {
           onLinkClick();
           window.open("https://t.me/SUTComputer", "_blank", "noreferrer");
@@ -142,7 +144,7 @@ const App = () => {
       ),
     },
     {
-      title: "گالری",
+      title: "فعالیت های انجمن",
       content: <Gallery />,
     },
     {
@@ -160,7 +162,7 @@ const App = () => {
   const contentStyle = {
     height: "500px",
     textAlign: "center",
-    color: token.colorTextTertiary,
+    color: "white",
     backgroundColor: token.colorFillAlter,
     borderRadius: token.borderRadiusLG,
     border: `1px dashed ${token.colorBorder}`,
@@ -174,6 +176,18 @@ const App = () => {
     <Completion />
   ) : (
     <div dir="rtl" className="Container">
+      <div className="flex flex-row flex-center">
+        <img
+          src="/src/assets/sadjad-logo.png"
+          alt="Sadjad University Logo"
+          style={{ height: "100px" }}
+        />
+        <img
+          src="/src/assets/f2.png"
+          alt="Computer Science Logo"
+          style={{ height: "150px" }}
+        />
+      </div>
       <h1>به دانشگاه سجاد خوش آمدید</h1>
       <section className="Steps">
         <Steps current={current} items={items} />
@@ -181,6 +195,7 @@ const App = () => {
         <div style={{ marginTop: 24 }}>
           {current < steps.length - 1 && (
             <Button
+              style={{ color: "white" }}
               type="primary"
               onClick={() => next()}
               disabled={
@@ -219,11 +234,14 @@ const App = () => {
           gap: "20px",
           fontSize: "12px",
           fontWeight: "bold",
-          color: "gray",
+          color: "white",
         }}
       >
         <h3>کپی رایت</h3>
-        <a href="https://emadlashkari.me/" style={{ fontSize: "15px" }}>
+        <a
+          href="https://emadlashkari.me/"
+          style={{ fontSize: "15px", color: "white" }}
+        >
           عماد لشکری
         </a>
         <h3>انجمن علمی کامپیوتر دانشگاه سجاد</h3>
