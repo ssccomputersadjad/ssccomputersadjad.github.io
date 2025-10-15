@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Button, Steps, theme } from "antd";
 import "./App.css";
 import { useMediaQuery } from "react-responsive";
+import sadjadLogo from "./assets/sadjad-logo.png";
+import computerLogo from "./assets/f2.png";
 
 const JoinSadjadChannel = ({ onLinkClick }) => {
   return (
@@ -75,7 +77,7 @@ const Completion = () => {
 };
 
 const Gallery = () => {
-  const imageModules = import.meta.glob("/src/assets/img/**/*.{jpg,jpeg,JPG}", {
+  const imageModules = import.meta.glob("./assets/img/**/*.{jpg,jpeg,JPG}", {
     eager: true,
   });
   const images = Object.values(imageModules).map((module) => module.default);
@@ -178,12 +180,12 @@ const App = () => {
     <div dir="rtl" className="Container">
       <div className="flex flex-row flex-center">
         <img
-          src="/src/assets/sadjad-logo.png"
+          src={sadjadLogo}
           alt="Sadjad University Logo"
           style={{ height: "100px" }}
         />
         <img
-          src="/src/assets/f2.png"
+          src={computerLogo}
           alt="Computer Science Logo"
           style={{ height: "150px" }}
         />
