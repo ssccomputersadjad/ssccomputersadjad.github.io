@@ -241,7 +241,7 @@ const App = () => {
       >
         <h3>کپی رایت</h3>
         <a
-          href="https://emadlashkari.me/"
+          href="https://emadlashkari.tech/"
           style={{ fontSize: "15px", color: "white" }}
         >
           عماد لشکری
